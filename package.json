@@ -4,7 +4,11 @@
   "description": "SpecFlow CLI extension for OpenCode - Spec-Driven Development",
   "main": "dist/index.js",
   "bin": {
-    "specflow": "./dist/index.js"
+    "specflow": "./bin/specflow"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./opencode": "./dist/opencode/plugin.js"
   },
   "type": "module",
   "scripts": {
@@ -16,6 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@opencode-ai/plugin": "^0.1.0",
     "boxen": "^7.1.1",
     "chalk": "^5.3.0",
     "commander": "^11.0.0",

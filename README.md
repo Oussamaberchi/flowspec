@@ -70,6 +70,37 @@ specflow verify
 specflow secure
 ```
 
+## OpenCode Integration
+
+SpecFlow now ships an OpenCode plugin so it can be invoked directly from the OpenCode CLI.
+
+### Option A: Project-Local Plugin (fastest)
+1. Install dependencies and build:
+   ```bash
+   npm install
+   npm run build
+   ```
+2. Open this repo in OpenCode. The plugin file lives at `.opencode/plugins/specflow.ts` (and `.opencode/plugin/specflow.ts` for older builds) and will be auto-loaded.
+3. In OpenCode, ask the agent to run the `specflow` tool, for example:
+   ```text
+   Use the specflow tool to run "init" in the current repo.
+   ```
+
+### Option B: Use as a Package Plugin
+1. Build and link the package:
+   ```bash
+   npm install
+   npm run build
+   npm link
+   ```
+2. In your target project, add a plugin entry in your OpenCode config:
+   ```json
+   {
+     "plugin": ["specflow/opencode"]
+   }
+   ```
+3. Ensure the target project can resolve `specflow` (install from npm or `npm link specflow`).
+
 ## AI Models
 - **Init**: Gemini 3 Pro
 - **Parse**: GLM 4.7
