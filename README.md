@@ -8,9 +8,14 @@ SpecFlow is a CLI extension for OpenCode that enables Spec-Driven Development.
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Oussamaberchi/opencode-spec.git
-   cd opencode-spec
+   git clone https://github.com/Oussamaberchi/flowspec.git
+   cd flowspec
    ```
+
+### Install with LLM Assistance
+
+For a guided installation using an LLM (like ChatGPT, Claude, or Gemini), please see [LLM_INSTALL.md](LLM_INSTALL.md).
+
 2. Install dependencies
    ```bash
    npm install

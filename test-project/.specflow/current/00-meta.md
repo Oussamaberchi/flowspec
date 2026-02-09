@@ -1,3 +1,0 @@
-# Project: test-project
-
-Metadata...
